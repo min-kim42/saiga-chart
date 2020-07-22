@@ -1,1 +1,3 @@
-# film-rating-web
+# Saiga
+
+Saiga is a film rating web application.
