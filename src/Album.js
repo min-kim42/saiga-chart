@@ -6,10 +6,10 @@ function Album({ rank, title, artist, cover }) {
   return (
     <div class="album">
       <img src={cover} alt={title} title={title} />
-      <div class="album__info">
-        <h3 class="album__rank">{rank}</h3>
-        <h4 class="album__title">{title}</h4>
-        <h5 class="album__artist">{artist}</h5>
+      <div className="album__info">
+        <h3 className="album__rank">{rank}</h3>
+        <h4 className="album__title">{title}</h4>
+        <h5 className="album__artist">{artist}</h5>
       </div>
     </div>
   );
