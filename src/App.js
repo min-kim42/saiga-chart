@@ -7,14 +7,17 @@ class App extends React.Component {
     isLoading: true,
     albums: [],
   };
-  // wait until the album data is fully loaded
   getAlbums = async () => {
+    // wait until the album data is fully loaded by axios
     const albums = await axios.get(
       // use CORS proxy to get around "No Acess-Control-Allow-Origin header" error
       "https://fierce-ridge-86043.herokuapp.com/https://api.deezer.com/chart/0/albums"
     );
     this.setState({ albums: albums.data.data, isLoading: false });
   };
+  async componentDidMount() {
+    this.getAlbums();
+  }
 }
 
 export default App;
