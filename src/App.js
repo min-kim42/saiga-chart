@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Album from "./Album";
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -21,20 +22,26 @@ class App extends React.Component {
   render() {
     const { isLoading, albums } = this.state;
     return (
-      <div>
-        {isLoading
-          ? "Loading..."
-          : albums.map((album) => (
+      <section class="container">
+        {isLoading ? (
+          <div class="loading-message">
+            <span class="loading-message__text">Loading...</span>
+          </div>
+        ) : (
+          <div class="albums">
+            {albums.map((album) => (
               <Album
                 key={album.id}
                 id={album.id}
-                position={album.position}
+                rank={album.position}
                 artist={album.artist.name}
                 title={album.title}
                 cover={album.cover_medium}
               />
             ))}
-      </div>
+          </div>
+        )}
+      </section>
     );
   }
 }
