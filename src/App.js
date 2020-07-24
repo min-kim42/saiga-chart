@@ -18,6 +18,25 @@ class App extends React.Component {
   async componentDidMount() {
     this.getAlbums();
   }
+  render() {
+    const { isLoading, albums } = this.state;
+    return (
+      <div>
+        {isLoading
+          ? "Loading..."
+          : albums.map((album) => (
+              <Album
+                key={album.id}
+                id={album.id}
+                position={album.position}
+                artist={album.artist.name}
+                title={album.title}
+                cover={album.cover_medium}
+              />
+            ))}
+      </div>
+    );
+  }
 }
 
 export default App;
