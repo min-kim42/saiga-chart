@@ -1,3 +1,3 @@
-# Saiga
+# Saiga Chart
 
-Saiga is a film rating web application.
+Saiga Chart is the chart for the most popular music tracks.
