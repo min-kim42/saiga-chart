@@ -1,42 +1,46 @@
 import React from "react";
 import axios from "axios";
-import Album from "./Album";
+import Album from "./components/Track";
 import "./App.css";
 
 class App extends React.Component {
   state = {
     isLoading: true,
-    albums: [],
+    tracks: [],
   };
-  getAlbums = async () => {
-    // wait until the album data is fully loaded by axios
-    const albums = await axios.get(
+  getTracks = async () => {
+    // wait until the tracks data are fully loaded by axios
+    const tracks_data = await axios.get(
       // use CORS proxy to get around "No Acess-Control-Allow-Origin header" error
-      "https://fierce-ridge-86043.herokuapp.com/https://api.deezer.com/chart/0/albums"
+      "https://fierce-ridge-86043.herokuapp.com/https://api.deezer.com/chart/0/tracks"
     );
-    this.setState({ albums: albums.data.data, isLoading: false });
+    this.setState({ tracks: tracks_data.data.data, isLoading: false });
   };
   async componentDidMount() {
-    this.getAlbums();
+    this.getTracks();
   }
   render() {
-    const { isLoading, albums } = this.state;
+    const { isLoading, tracks } = this.state;
     return (
-      <section class="container">
+      <section className="container">
         {isLoading ? (
-          <div class="loading-message">
-            <span class="loading-message__text">Loading...</span>
+          <div className="loading-message">
+            <span className="loading-message__text">Loading...</span>
           </div>
         ) : (
-          <div class="albums">
-            {albums.map((album) => (
+          <div className="tracks">
+            {tracks.map((track) => (
               <Album
-                key={album.id}
-                id={album.id}
-                rank={album.position}
-                artist={album.artist.name}
-                title={album.title}
-                cover={album.cover_medium}
+                key={track.id}
+                id={track.id}
+                rank={track.position}
+                artistName={track.artist.name}
+                artistPhoto={track.artist.picture_small}
+                trackTitle={track.title}
+                albumTitle={track.album.title}
+                albumCover={track.album.cover_medium}
+                trackFile={track.preview}
+                trackLink={track.link}
               />
             ))}
           </div>
