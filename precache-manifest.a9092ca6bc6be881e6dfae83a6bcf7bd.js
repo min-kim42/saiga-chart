@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7fba12dea4e417f263d955930aee9dab",
+    "revision": "1cc23c088f2711459f769e068d7fc0b8",
     "url": "/saiga-chart/index.html"
   },
   {
