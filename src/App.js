@@ -1,12 +1,12 @@
 import React from "react";
 import { HashRouter, Route } from "react-router-dom";
-import Music from "./routes/Music";
+import Home from "./routes/Home";
 
 function App() {
   return (
     <HashRouter>
       {/* exact parameter needed to prevent partial matching */}
-      <Route path="/" exact={true} component={Music} />
+      <Route path="/" exact={true} component={Home} />
     </HashRouter>
   );
 }
