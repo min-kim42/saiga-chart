@@ -25,7 +25,7 @@ function Track({
       </div>
       <div className="track__column">
         <div className="track__info">
-          <h4 className="track__title">{trackTitle}</h4>
+          <h4 className="track__title">{trackTitle.slice(0, 21)}</h4>
           <div className="track__artistInfo">
             <img
               className="track__artistPhoto"
@@ -33,7 +33,7 @@ function Track({
               alt={artistName}
               title={artistName}
             ></img>
-            <h5 className="track__artistName">{artistName}</h5>
+            <h5 className="track__artistName">{artistName.slice(0, 21)}</h5>
           </div>
           <div className="track__deezerLink">
             <a
