@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1cc23c088f2711459f769e068d7fc0b8",
+    "revision": "9e341bd8d09761eeb17637679a985b59",
     "url": "/saiga-chart/index.html"
   },
   {
-    "revision": "027a07e313877fb92738",
+    "revision": "9d22555dc8a20913727e",
     "url": "/saiga-chart/static/css/main.b2278133.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/saiga-chart/static/js/2.a91b5c68.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "027a07e313877fb92738",
-    "url": "/saiga-chart/static/js/main.94eeede1.chunk.js"
+    "revision": "9d22555dc8a20913727e",
+    "url": "/saiga-chart/static/js/main.7a29c273.chunk.js"
   },
   {
     "revision": "2d63c59310ac3ed95c3c",

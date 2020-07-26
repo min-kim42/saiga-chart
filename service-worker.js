@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/saiga-chart/precache-manifest.a9092ca6bc6be881e6dfae83a6bcf7bd.js"
+  "/saiga-chart/precache-manifest.0c46a8bf3f0abeb7148caee99638091a.js"
 );
 
 self.addEventListener('message', (event) => {
